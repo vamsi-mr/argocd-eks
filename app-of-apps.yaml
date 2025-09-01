@@ -4,7 +4,7 @@ metadata:
   name: platform-root
   namespace: argocd # Namespace where the Argo CD Application resource lives
   finalizers:
-    - resources-finalizer.argoproj.io/applications
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default # The Argo CD Project this application belongs to
   source:
@@ -20,3 +20,4 @@ spec:
       selfHeal: true # Revert changes made manually in the cluster to match Git
     syncOptions:
       - CreateNamespace=true # Automatically create the target namespace if it doesn't exist
+      
