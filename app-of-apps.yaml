@@ -4,8 +4,7 @@ metadata:
   name: platform-root
   namespace: argocd # Namespace where the Argo CD Application resource lives
   finalizers:
-    # The default behaviour is foreground cascading deletion
-    - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argoproj.io/applications
 spec:
   project: default # The Argo CD Project this application belongs to
   source:
